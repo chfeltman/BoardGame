@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGame", "BoardGame\BoardGame.csproj", "{819D5C2D-D9C6-4728-9933-204EC0B18AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInterface", "CommandLineInterface\CommandLineInterface.csproj", "{C4879B2F-E7D3-42A5-BD00-B836D8D62E08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraMystica", "TerraMystica\TerraMystica.csproj", "{4A1F738B-E58B-401E-88AD-1E32C5279397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraMysticaUnitTests", "TerraMysticaUnitTests\TerraMysticaUnitTests.csproj", "{A9BBDD94-39F0-4762-B9F3-89E104650456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtil", "TestUtil\TestUtil.csproj", "{61F0ABCF-9B31-40AE-8001-EDC296278069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameUnitTests", "BoardGameUnitTests\BoardGameUnitTests.csproj", "{4FF2FD59-B3C1-401E-BCF1-092DCCAA571A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnvConfig", "EnvConfig", "{764DF0B1-AA7F-4576-BA0C-F8BD6CB6041B}"
+	ProjectSection(SolutionItems) = preProject
+		EnvConfg\MSTest.runsettings = EnvConfg\MSTest.runsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{819D5C2D-D9C6-4728-9933-204EC0B18AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819D5C2D-D9C6-4728-9933-204EC0B18AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819D5C2D-D9C6-4728-9933-204EC0B18AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819D5C2D-D9C6-4728-9933-204EC0B18AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4879B2F-E7D3-42A5-BD00-B836D8D62E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4879B2F-E7D3-42A5-BD00-B836D8D62E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4879B2F-E7D3-42A5-BD00-B836D8D62E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4879B2F-E7D3-42A5-BD00-B836D8D62E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1F738B-E58B-401E-88AD-1E32C5279397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1F738B-E58B-401E-88AD-1E32C5279397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1F738B-E58B-401E-88AD-1E32C5279397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1F738B-E58B-401E-88AD-1E32C5279397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BBDD94-39F0-4762-B9F3-89E104650456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BBDD94-39F0-4762-B9F3-89E104650456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BBDD94-39F0-4762-B9F3-89E104650456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BBDD94-39F0-4762-B9F3-89E104650456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F0ABCF-9B31-40AE-8001-EDC296278069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F0ABCF-9B31-40AE-8001-EDC296278069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F0ABCF-9B31-40AE-8001-EDC296278069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F0ABCF-9B31-40AE-8001-EDC296278069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF2FD59-B3C1-401E-BCF1-092DCCAA571A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF2FD59-B3C1-401E-BCF1-092DCCAA571A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF2FD59-B3C1-401E-BCF1-092DCCAA571A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF2FD59-B3C1-401E-BCF1-092DCCAA571A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

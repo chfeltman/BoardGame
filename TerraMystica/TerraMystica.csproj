@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A1F738B-E58B-401E-88AD-1E32C5279397}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TerraMystica</RootNamespace>
+    <AssemblyName>TerraMystica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\BuildAction.cs" />
+    <Compile Include="Actions\CommitPriestAction.cs" />
+    <Compile Include="Actions\TerraformAction.cs" />
+    <Compile Include="Actions\IAction.cs" />
+    <Compile Include="Actions\TerraMysticaAction.cs" />
+    <Compile Include="Actions\TurnInScrollAction.cs" />
+    <Compile Include="Actions\UpgradeBuildingAction.cs" />
+    <Compile Include="Actions\UpgradeShippingAction.cs" />
+    <Compile Include="Actions\UpgradeTerraformAction.cs" />
+    <Compile Include="Actions\UsePowerAbilityAction.cs" />
+    <Compile Include="Gameplay\Building.cs" />
+    <Compile Include="Gameplay\BuildingType.cs" />
+    <Compile Include="Gameplay\BuildingUpgrade.cs" />
+    <Compile Include="Gameplay\Cults\CultistTrackBoard.cs" />
+    <Compile Include="Gameplay\Cults\CultTrack.cs" />
+    <Compile Include="Gameplay\Cults\CultTrackBonus.cs" />
+    <Compile Include="Gameplay\Cults\CultType.cs" />
+    <Compile Include="Gameplay\Cults\PriestSlot.cs" />
+    <Compile Include="Gameplay\PowerAbility\IPowerAbility.cs" />
+    <Compile Include="Gameplay\Scrolls\ITerraMysticaScroll.cs" />
+    <Compile Include="Gameplay\Cults\TerraMysticaCultTrackResources.cs" />
+    <Compile Include="Player\TerraMysticaPlayerResources.cs" />
+    <Compile Include="Gameplay\TerraMysticaResource.cs" />
+    <Compile Include="Races\Mermaids.cs" />
+    <Compile Include="Gameplay\Power.cs" />
+    <Compile Include="Races\Race.cs" />
+    <Compile Include="Player\TerraMysticaPlayer.cs" />
+    <Compile Include="Resources\Exceptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exceptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GameStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TerraMysticaBoard.cs" />
+    <Compile Include="Util\TerrainExtensions.cs" />
+    <Compile Include="Terrain\TerrainType.cs" />
+    <Compile Include="Terrain\TerraTile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\StringExtensions.cs" />
+    <Compile Include="Util\TerraMysticaPlayerExtensions.cs" />
+    <Compile Include="Util\TerraMysticaResourceExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoardGame\BoardGame.csproj">
+      <Project>{819d5c2d-d9c6-4728-9933-204ec0b18afd}</Project>
+      <Name>BoardGame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Exceptions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GameStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GameStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
