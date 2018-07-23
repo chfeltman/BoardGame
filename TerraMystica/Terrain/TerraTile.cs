@@ -1,13 +1,14 @@
 ﻿namespace TerraMystica.Terrain
 {
     using BoardGame;
+    using Player;
     using TerraMystica.Gameplay;
 
     internal class TerraTile : Tile
     {
         public TerrainType Type { get; set; }
 
-        public IPlayer Owner { get; set; }
+        public TerraMysticaPlayer Owner { get; set; }
 
         public Building Building { get; set; }
 

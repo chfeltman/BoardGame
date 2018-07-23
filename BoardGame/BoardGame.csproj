@@ -46,6 +46,7 @@
     <Compile Include="Gameplay\Decision.cs" />
     <Compile Include="Gameplay\UsableValue.cs" />
     <Compile Include="Gameplay\WrappedValue.cs" />
+    <Compile Include="Gameplay\IAction.cs" />
     <Compile Include="IBoard.cs" />
     <Compile Include="ILocation.cs" />
     <Compile Include="IPlayer.cs" />

@@ -1,8 +1,6 @@
-﻿namespace TerraMystica.Actions
+﻿namespace BoardGame.Gameplay
 {
-    using BoardGame.Gameplay;
-
-    interface IAction
+    public interface IAction
     {
         Cost ActionCost { get; }
         Decision CanExecute();
