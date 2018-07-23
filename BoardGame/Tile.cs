@@ -4,7 +4,7 @@
 
     public class Tile : ITile
     {
-        List<ITile> neighbors = new List<ITile>();
+        protected List<ITile> neighbors = new List<ITile>();
 
         public ILocation Location { get; set; }
 

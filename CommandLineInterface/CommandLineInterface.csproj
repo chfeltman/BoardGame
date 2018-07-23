@@ -45,6 +45,12 @@
   <ItemGroup>
     <Compile Include="DemoBuilder.cs" />
     <Compile Include="Display\BoardDisplay.cs" />
+    <Compile Include="Display\BuildingTypeDisplay.cs" />
+    <Compile Include="Display\MenuDisplay.cs" />
+    <Compile Include="Util\DisplayFactory.cs" />
+    <Compile Include="Util\EnumNameDisplay.cs" />
+    <Compile Include="Util\IPrint.cs" />
+    <Compile Include="Util\ColoredConsolePrint.cs" />
     <Compile Include="Display\TerrainTypeDisplay.cs" />
     <Compile Include="Display\TextDisplay.cs" />
     <Compile Include="Display\TileDisplay.cs" />

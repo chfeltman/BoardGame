@@ -56,7 +56,7 @@
             var action = prepareAction();
             beforeExecute?.Invoke();
 
-            action.CanExecute().ShouldBeHaveResult(expectation);
+            action.CanExecute().ShouldHaveResult(expectation);
 
             if (expectation)
             {

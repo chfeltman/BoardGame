@@ -1,22 +1,30 @@
 ﻿namespace CommandLineInterface.Display
 {
-    using System.Collections.Generic;
-    using System.Linq;
+    using System;
     using TerraMystica.Terrain;
+    using Util;
 
     internal class TileDisplay
     {
-        public TileDisplay(IEnumerable<ITerrainTypeDisplay> typeDisplays)
+        public TileDisplay(IDisplayFactory displayFactory)
         {
-            this.TypeDisplays = typeDisplays ?? Enumerable.Empty<ITerrainTypeDisplay>();
+            if(displayFactory == null)
+            {
+                throw new ArgumentNullException(nameof(displayFactory));
+            }
+
+            this.DisplayFactory = displayFactory;
         }
 
-        IEnumerable<ITerrainTypeDisplay> TypeDisplays { get; }
+        public IDisplayFactory DisplayFactory { get; }
 
         public void PrintTile(TerraTile tile)
         {
-            var display = this.TypeDisplays.FirstOrDefault(d => d.Type == tile.Type);
-            display?.Print();
+            IPrint displayer = tile.Building != null
+                ? (IPrint)this.DisplayFactory.CreateBuildingDisplay(tile)
+                : this.DisplayFactory.CreateTerrainDisplay(tile);
+
+            displayer?.Print();
         }
     }
 }

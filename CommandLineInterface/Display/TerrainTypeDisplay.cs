@@ -1,90 +1,73 @@
 ﻿namespace CommandLineInterface.Display
 {
     using System;
-    using System.IO;
-    using BoardGame.Util;
     using TerraMystica.Terrain;
+    using Util;
 
-    internal interface ITerrainTypeDisplay
+    internal abstract class TerrainTypeDisplay : EnumNameDisplay<TerrainType>
     {
-        TerrainType Type { get; }
-
-        void Print();
+        protected TerrainTypeDisplay(ConsoleColor foregroundColor) : base(foregroundColor) { }
     }
 
-    internal abstract class TerrainTypeConsoleDisplay : ITerrainTypeDisplay
+    internal class LakeTerrainDisplay : TerrainTypeDisplay
     {
-        public abstract ConsoleColor ForegroundColor { get; }
-
-        public abstract TerrainType Type { get; }
-
-        public virtual void Print()
-        {
-            Console.ForegroundColor = this.ForegroundColor;
-            Console.Write(EnumNameLookup<TerrainType>.Lookup(this.Type));
-            Console.ResetColor();
-        }
-    }
-
-    internal class LakeConsoleDisplay : TerrainTypeConsoleDisplay
-    {
-        public override ConsoleColor ForegroundColor => ConsoleColor.DarkBlue;
+        public LakeTerrainDisplay() : base(ConsoleColor.DarkBlue) { }
 
         public override TerrainType Type => TerrainType.Lake;
     }
 
-    internal class SwampConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class SwampTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.DarkGray;
+        public SwampTerrainDisplay() : base(ConsoleColor.DarkGray) { }
 
         public override TerrainType Type => TerrainType.Swamp;
     }
 
-    internal class PlainConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class PlainTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.DarkGreen;
+        public PlainTerrainDisplay() : base(ConsoleColor.DarkGreen) { }
 
         public override TerrainType Type => TerrainType.Plain;
     }
 
-    internal class DesertConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class DesertTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.Yellow;
+        public DesertTerrainDisplay() : base(ConsoleColor.Yellow) { }
 
         public override TerrainType Type => TerrainType.Desert;
     }
 
-    internal class WastelandConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class WastelandTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.DarkRed;
+        public WastelandTerrainDisplay() : base(ConsoleColor.DarkRed) { }
 
         public override TerrainType Type => TerrainType.Wasteland;
     }
 
-    internal class MountainConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class MountainTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.Gray;
+        public MountainTerrainDisplay() : base(ConsoleColor.Gray) { }
 
         public override TerrainType Type => TerrainType.Mountain;
     }
 
-    internal class ForestConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class ForestTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.Green;
+        public ForestTerrainDisplay() : base(ConsoleColor.Green) { }
 
         public override TerrainType Type => TerrainType.Forest;
     }
 
-    internal class RiverConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class RiverTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.Blue;
+        public RiverTerrainDisplay() : base(ConsoleColor.Blue) { }
 
         public override TerrainType Type => TerrainType.River;
     }
 
-    internal class VoidConsoleDisplay : TerrainTypeConsoleDisplay
+    internal class VoidTerrainDisplay : TerrainTypeDisplay
     {
-        public override ConsoleColor ForegroundColor => ConsoleColor.Black;
+        public VoidTerrainDisplay() : base(ConsoleColor.Black) { }
 
         public override TerrainType Type => TerrainType.Void;
 

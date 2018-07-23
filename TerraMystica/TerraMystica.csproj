@@ -43,7 +43,6 @@
     <Compile Include="Actions\BuildAction.cs" />
     <Compile Include="Actions\CommitPriestAction.cs" />
     <Compile Include="Actions\TerraformAction.cs" />
-    <Compile Include="Actions\IAction.cs" />
     <Compile Include="Actions\TerraMysticaAction.cs" />
     <Compile Include="Actions\TurnInScrollAction.cs" />
     <Compile Include="Actions\UpgradeBuildingAction.cs" />
